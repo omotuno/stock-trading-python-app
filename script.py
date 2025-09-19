@@ -20,7 +20,7 @@ for ticker in data['results']:
     tickers.append(ticker)
 while 'next_url' in data:
     print('requesting next page', data['next_url'])
-    time.sleep(1.5)
+    time.sleep(60)
     response = requests.get(data['next_url'] + f'&apiKey={polygon_api_key}')
     data = response.json()
     print(data)
